@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Form</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="form">
+      <form action="#" id="form" class="form__body">
+        <h1 class="form__title">Отправка данных на почту</h1>
+
+        <div class="form__item">
+          <label for="formName" class="form__label">Имя*:</label>
+          <input id="formName" type="text" name="name" class="form__input">
+        </div>
+
+        <div class="form__item">
+          <label for="formEmail" class="form__label">Email*:</label>
+          <input id="formEmail" type="text" name="email" class="form__input">
+        </div>
+
+        <div class="options__item">
+          <input type="radio" checked value="right" id="formRightHanded" class="options__input">
+          <label for="formRightHanded" class="options__label">Правша</label>
+        </div>
+
+        <div class="options__item">
+          <input type="radio" value="left" id="formLeftHanded" class="options__input">
+          <label for="formLeftHanded" class="options__label">Левша</label>
+        </div>
+
+<div class="form__item">
+  <label for="formMessage" class="form__label">Сообщение:</label>
+  <textarea name="message" id="formMessage" class="form__input"></textarea>
+</div>
+
+<div class="form__item">
+  <div class="form__label">Возраст:</div>
+<select name="age" class="select">
+  <option value="18-25">Молодой</option>
+  <option value="25-24">Взрослый</option>
+  <option value="45+">Опытный</option>
+</select>
+</div>
+
+<div class="form__item">
+  <div class="form__label">Прикрепить фото</div>
+  <div class="file">
+    <div class="file__item">
+      <input type="file" accept=".jpg, .png, .gif" id="formImage" class="file__input">
+      <div class="file__button">Выбрать</div>
+    </div>
+    <div class="file__preview"></div>
+  </div>
+</div>
+
+<div class="form__item">
+  <div class="checkbox">
+    <input type="checkbox" id="formAgreement" class="checkbox__input">
+    <label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на...</span></label>
+  </div>
+</div>
+
+      </form>
+    </div>
+  </div>
+</body>
+</html>
