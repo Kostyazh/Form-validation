@@ -4,7 +4,6 @@
 
    async function formSend (e) {
 e.preventDefault();
-
 let error = formValidate(form);
 
 if(error === 0){
@@ -56,4 +55,37 @@ if(error === 0){
     return re.test(String(email).toLowerCase());
    }
 
+   //Preview
+
+   const formImage = document.getElementById('formImage');
+   const formPreview = document.getElementById('formPreview');
+
+   formImage.addEventListener('change', () => {
+     uploadFile(formImage.files[0]);
+   });
+
+   function uploadFile(file){
+     //проверка типа файла
+     if(!['image/jpeg','image/png','image/gif'].includes(file.type)){
+alert('only img');
+       formImage.value = '';
+       return;
+     }
+     //проверка размера файла
+    if(file.size > 2 * 1024 * 1024){
+      alert('file must less 2mb');
+      return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+      formPreview.innerHTML = `<img src="${e.target.result}" alt="Photo">`;
+    };
+
+reader.onerror = function (e) {
+  alert('error');
+};
+reader.readAsDataURL(file);
+   }
 });
