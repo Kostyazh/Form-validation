@@ -39,6 +39,10 @@ outline: none;
   box-shadow: 0 0 15px darkolivegreen;
 }
 
+.form__input._error {
+  box-shadow: 0 0 15px red;
+}
+
 textarea.form__input {
   min-height: 20px;
   max-height: 90px;
